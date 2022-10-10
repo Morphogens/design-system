@@ -1,6 +1,9 @@
 {
 	"name": "design-system",
 	"version": "0.0.1",
+	"exports": {
+		".": "./package"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "svelte-kit sync && svelte-package",
