@@ -46,7 +46,66 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
 			},
 
 			'.text-m-head': {
-				'font-size': '36px',
+				'font-size': '35px',
+				'font-weight': '350',
+				'letter-spacing': '-0.02em',
+				'line-height': '36px',
+				'font-feature-settings': 'ss01', // Enable heavy variant of Maxi.
+			},
+
+			'.text-s-head': {
+				'font-size': '26px',
+				'font-weight': '400',
+				'letter-spacing': '-0.01em',
+				'line-height': '28px',
+			},
+
+			'.text-xs-head': {
+				'font-size': '18px',
+				'font-weight': '400',
+				'letter-spacing': '0.01em',
+				'line-height': '20px',
+			},
+
+			'.text-l-label': {
+				'font-size': '52px',
+				'font-weight': '300',
+				'letter-spacing': '-0.03em',
+				'line-height': '52px',
+				'font-feature-settings': 'ss01', // Enable heavy variant of Maxi.
+			},
+
+			'.text-m-label': {
+				'font-size': '35px',
+				'font-weight': '350',
+				'letter-spacing': '-0.02em',
+				'line-height': '36px',
+				'font-feature-settings': 'ss01', // Enable heavy variant of Maxi.
+			},
+
+			'.text-s-label': {
+				'font-size': '26px',
+				'font-weight': '400',
+				'letter-spacing': '-0.01em',
+				'line-height': '28px',
+			},
+
+			'.text-xs-label': {
+				'font-size': '18px',
+				'font-weight': '400',
+				'letter-spacing': '0.01em',
+				'line-height': '20px',
+			},
+
+			'.text-l-label': {
+				'font-size': '52px',
+				'font-weight': '300',
+				'letter-spacing': '-0.03em',
+				'line-height': '52px',
+			},
+
+			'.text-m-label': {
+				'font-size': '35px',
 				'font-weight': '350',
 				'letter-spacing': '-0.02em',
 				'line-height': '36px',
@@ -67,16 +126,47 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
 				'line-height': '20px',
 			},
 
+			'.text-l-smallcaps': {
+				'font-size': '34.25px',
+				'font-weight': '470',
+				'line-height': '52px',
+				'text-transform': 'uppercase',
+			},
+
 			'.text-m-smallcaps': {
 				'font-size': '23px',
 				'font-weight': '600',
 				'line-height': '24px',
+				'text-transform': 'uppercase',
 			},
 
 			'.text-s-smallcaps': {
 				'font-size': '17px',
 				'font-weight': '650',
 				'letter-spacing': '0.02em',
+				'line-height': '20px',
+				'text-transform': 'uppercase',
+			},
+
+			'.text-xs-smallcaps': {
+				'font-size': '12px',
+				'font-weight': '600',
+				'letter-spacing': '0.04em',
+				'line-height': '16px',
+				'text-transform': 'uppercase',
+			},
+
+			'.text-s-indent': {
+				'font-size': '26px',
+				'font-weight': '400',
+				'letter-spacing': '-0.01em',
+				'line-height': '28px',
+			},
+
+			'.text-xs-indent': {
+				'font-size': '18px',
+				'font-weight': '400',
+				'letter-spacing': '0.01em',
 				'line-height': '20px',
 			},
 
