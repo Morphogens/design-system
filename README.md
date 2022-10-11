@@ -20,6 +20,31 @@ where `d2ac701fe2b7ac43bc4b39b259882b90691948f2` is any commit hash. Then ask np
 npm install
 ```
 
+Next, update tailwind.config.cjs to use the Tailwind config from the design system:
+
+```
+const designSystemConfig = require('design-system/package/tailwind/config.cjs')
+
+module.exports = designSystemConfig
+```
+
+`designSystemConfig` is just a regular JS object, so all the normal JS approaches are available for customizing it. For example, using the spread operator:
+
+```
+const designSystemConfig = require('design-system/package/tailwind/config.cjs')
+
+module.exports = {
+    // By default, accept all the design system Tailwind config options.
+    ...designSystemConfig,
+
+    // Disable Tailwind Preflight, but use the design system's settings for all of Tailwind's other core plugins.
+    corePlugins: {
+        ...designSystemConfig.corePlugins,
+		preflight: false,
+	},
+}
+```
+
 ## Importing Gizmo
 
 Import it like this:
