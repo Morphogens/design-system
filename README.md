@@ -1,38 +1,49 @@
-# create-svelte
+# Gizmo
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is our design system!
 
-## Creating a project
+## Adding Gizmo to your project
 
-If you're seeing this, you've probably already done this step. Congrats!
+Add it to package.json like this:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+```
+{
+    "dependencies": {
+        "design-system": "git://github.com/Morphogens/design-system.git#d2ac701fe2b7ac43bc4b39b259882b90691948f2"
+    }
+}
 ```
 
-## Developing
+where `d2ac701fe2b7ac43bc4b39b259882b90691948f2` is any commit hash. Then ask npm to install it:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```
+npm install
+```
+
+## Importing Gizmo
+
+Import it like this:
+
+```
+<script lang="ts">
+import Switch from 'design-system/package/Switch.v1.svelte'
+</script>
+
+<Switch />
+```
+
+## Making updates to Gizmo
+
+Start the development server with
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+When you change a component, make a copy and increment the version number. `Switch.v1.svelte` becomes `Switch.v2.svelte`.
 
-To create a production version of your app:
+When you're done, run `npm run build` and push your changes to GitHub.
 
-```bash
-npm run build
-```
+## Updating the version of Gizmo your project is using
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+In package.json, update the commit hash you're pointing to, then run `npm install`.
