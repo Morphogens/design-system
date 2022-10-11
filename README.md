@@ -40,8 +40,8 @@ module.exports = {
     // Disable Tailwind Preflight, but use the design system's settings for all of Tailwind's other core plugins.
     corePlugins: {
         ...designSystemConfig.corePlugins,
-		preflight: false,
-	},
+        preflight: false,
+    },
 }
 ```
 
