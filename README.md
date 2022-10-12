@@ -37,7 +37,7 @@ module.exports = {
     // By default, accept all the design system Tailwind config options.
     ...designSystemConfig,
 
-    // Disable Tailwind Preflight, but use the design system's settings for all of Tailwind's other core plugins.
+    // Disable Tailwind Preflight, but use the design system's settings for Tailwind's other core plugins.
     corePlugins: {
         ...designSystemConfig.corePlugins,
         preflight: false,
@@ -55,6 +55,24 @@ import Switch from 'design-system/package/Switch.v1.svelte'
 </script>
 
 <Switch />
+```
+
+## Gotcha: Using Gizmo in existing projects
+
+By default, Gizmo enables Tailwind's CSS reset, called Preflight. If you're adding Gizmo to an existing app, that might break your styles. You can turn off Preflight by overriding the relevant property in your Tailwind config. The Tailwind docs on Preflight are [here](https://tailwindcss.com/docs/preflight).
+
+```
+const designSystemConfig = require('design-system/package/tailwind/config.cjs')
+
+module.exports = {
+    ...designSystemConfig,
+
+    // Disable Tailwind Preflight, but use the design system's settings for Tailwind's other core plugins.
+    corePlugins: {
+        ...designSystemConfig.corePlugins,
+        preflight: false,
+    },
+}
 ```
 
 ## Making updates to Gizmo
