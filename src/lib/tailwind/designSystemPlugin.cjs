@@ -175,7 +175,7 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
 			},
 
 			'.border-pill': {
-				'@apply border-8 border-solid border-gray-90 dark:border-gray-80': {},
+				'@apply content-box border-8 border-solid border-gray-90 dark:border-gray-80 !important': {},
 			},
 		},
 		['responsive']
