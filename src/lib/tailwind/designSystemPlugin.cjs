@@ -1,7 +1,7 @@
 // Tailwind plugin that includes extensions specific to the Morphogen design system.
 const plugin = require('tailwindcss/plugin')
 
-module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
+module.exports = plugin(function ({ addComponents, matchUtilities, addBase, addUtilities, theme }) {
 	addBase({
 		'@font-face': {
 			'font-family': 'ABC Maxi Round Variable',
@@ -19,8 +19,29 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
 		},
 	})
 
+	// ['gray', 'green', ...]
+	const colorNames = Object.keys(theme('colors'))
+	// controlComponents looks like this:
+	//
+	// {
+	//   '.bg-hover-active': {
+	//     '@apply bg-green-30 hover:bg-green-20 active:bg-green-40': {},
+	//   }
+	// }
+	//
+	// This slightly funny syntax is how you use @apply when creating component classes in plugins.
+	const controlComponents = {}
+	for (colorName of colorNames) {
+		const className = '.bg-hover-active-' + colorName
+		const selector = `@apply bg-${colorName}-30 hover:bg-${colorName}-20 active:bg-${colorName}-40`
+		controlComponents[className] = {
+			[selector]: {},
+		}
+	}
+
 	addComponents(
 		{
+			...controlComponents,
 			'.text-2xl-head': {
 				'font-size': '105px',
 				'font-weight': '200',
@@ -175,10 +196,22 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities }) {
 			},
 
 			'.border-pill': {
-				'@apply content-box border-8 border-solid border-gray-90 dark:border-gray-80 !important': {},
+				'@apply box-content border-8 border-solid border-gray-90 dark:border-gray-80 !important': {},
 			},
 		},
 		['responsive']
+	)
+
+	addComponents(
+		{
+			control: value => {
+				console.debug('value', value)
+				return {
+					[`@apply bg-${value}-30 hover:bg-${value}-20 active:bg-${value}-40`]: {},
+				}
+			},
+		},
+		{ values: theme('colors') }
 	)
 
 	addUtilities(
