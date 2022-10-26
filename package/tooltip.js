@@ -1,6 +1,4 @@
 import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css';
-import 'tippy.js/themes/light.css';
 export function makeTooltipVideo(src) {
     const vid = document.createElement('video');
     vid.autoplay = true;
