@@ -24,7 +24,7 @@ module.exports = plugin(function ({ addComponents, matchUtilities, addBase, addU
 	// controlComponents looks like this:
 	//
 	// {
-	//   '.bg-hover-active': {
+	//   '.bg-hover-active-green': {
 	//     '@apply bg-green-30 hover:bg-green-20 active:bg-green-40': {},
 	//   }
 	// }

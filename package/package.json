@@ -1,6 +1,9 @@
 {
   "name": "design-system",
   "version": "0.0.1",
+  "dependencies": {
+    "tippy.js": "6.3.7"
+  },
   "devDependencies": {
     "@playwright/test": "^1.25.0",
     "@sveltejs/adapter-auto": "next",
@@ -36,6 +39,7 @@
     "./fonts/ABCMaxiRoundVariable.woff2": "./fonts/ABCMaxiRoundVariable.woff2",
     "./tailwind/config.cjs": "./tailwind/config.cjs",
     "./tailwind/designSystemPlugin.cjs": "./tailwind/designSystemPlugin.cjs",
+    "./tooltip": "./tooltip.js",
     "./windowInnerHeight": "./windowInnerHeight.js",
     "./windowInnerWidth": "./windowInnerWidth.js"
   }

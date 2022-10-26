@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Title from '$lib/Title.v1.svelte'
 	import Switch from '$lib/Switch.v1.svelte'
+	import tooltip from '$lib/tooltip'
 
 	let schedule: string
 </script>
@@ -14,4 +15,6 @@
 	classes="border-pill"
 />
 
-<button class="bg-hover-active-orange">testing</button>
+<button use:tooltip={{ placement: 'top' }} title="Testing." class="bg-hover-active-orange"
+	>testing</button
+>
