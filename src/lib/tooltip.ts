@@ -1,6 +1,6 @@
 import tippy from 'tippy.js'
-// import 'tippy.js/dist/tippy.css'
-// import 'tippy.js/themes/light.css'
+import 'tippy.js/dist/tippy.css'
+import 'tippy.js/themes/light.css'
 import type { Props } from 'tippy.js'
 
 export function makeTooltipVideo(src) {
