@@ -1,7 +1,7 @@
 // Tailwind plugin that includes extensions specific to the Morphogen design system.
 const plugin = require('tailwindcss/plugin')
 
-module.exports = plugin(function ({ addComponents, matchUtilities, addBase, addUtilities, theme }) {
+module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme }) {
 	addBase({
 		'@font-face': {
 			'font-family': 'ABC Maxi Round Variable',
