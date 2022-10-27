@@ -30,9 +30,13 @@
   "exports": {
     "./package.json": "./package.json",
     "./Breakpoints": "./Breakpoints.js",
+    "./Button.v1.svelte": "./Button.v1.svelte",
     "./DesignSystem.v1.svelte": "./DesignSystem.v1.svelte",
+    "./MaybeLink.v1.svelte": "./MaybeLink.v1.svelte",
+    "./Sticker.v1.svelte": "./Sticker.v1.svelte",
     "./Switch.v1.svelte": "./Switch.v1.svelte",
     "./Title.v1.svelte": "./Title.v1.svelte",
+    "./connectors/FlatToFlat.v1.svelte": "./connectors/FlatToFlat.v1.svelte",
     "./debounce": "./debounce.js",
     "./fonts/ABCMaxiRoundVariable.ttf": "./fonts/ABCMaxiRoundVariable.ttf",
     "./fonts/ABCMaxiRoundVariable.woff": "./fonts/ABCMaxiRoundVariable.woff",
