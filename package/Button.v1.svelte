@@ -1,19 +1,19 @@
 <script>import MaybeLink from './MaybeLink.v1.svelte';
 export let size = 'm';
-export let backgroundColor = 'gray-50';
-export let disabled = false;
 export let classes = '';
+export let disabled = false;
 export let href = undefined;
 </script>
 
 <MaybeLink {href}>
 	<button
-		style="background-color: var(--{backgroundColor});"
 		class="
 				border-none
 				flex items-center justify-center 
 				whitespace-nowrap uppercase text-gray-90 
+				bg-gray-50
 				m-0
+				w-min
 				{size} 
 				{classes}
 			"

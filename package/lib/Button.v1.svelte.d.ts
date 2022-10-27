@@ -1,11 +1,10 @@
 import { SvelteComponentTyped } from "svelte";
-import type { ColorName, DesignSystemSize } from '$src/types';
+import type { DesignSystemSize } from '$src/types';
 declare const __propDef: {
     props: {
         size?: DesignSystemSize | undefined;
-        backgroundColor?: ColorName | undefined;
-        disabled?: boolean | undefined;
         classes?: string | undefined;
+        disabled?: boolean | undefined;
         href?: string | undefined | null;
     };
     events: {

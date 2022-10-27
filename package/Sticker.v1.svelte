@@ -1,5 +1,4 @@
 <script>export let size = 's';
-export let backgroundColor = 'gray-90';
 export let classes = '';
 </script>
 
@@ -7,10 +6,10 @@ export let classes = '';
 	class="
 		rounded-full 
 		flex items-center text-center rotate-[15deg]
+		bg-gray-90
 		{size} 
 		{classes}
 	"
-	style="background-color: var(--{backgroundColor});"
 >
 	<slot />
 </div>
