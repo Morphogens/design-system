@@ -2,7 +2,6 @@
 import type { ColorName, DesignSystemSize } from '$src/types'
 
 export let size: DesignSystemSize = 's'
-export let backgroundColor: ColorName = 'gray-90'
 export let classes = ''
 </script>
 
@@ -10,10 +9,10 @@ export let classes = ''
 	class="
 		rounded-full 
 		flex items-center text-center rotate-[15deg]
+		bg-gray-90
 		{size} 
 		{classes}
 	"
-	style="background-color: var(--{backgroundColor});"
 >
 	<slot />
 </div>
