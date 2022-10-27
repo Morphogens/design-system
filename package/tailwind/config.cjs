@@ -8,8 +8,7 @@ module.exports = {
 	purge: [
 		// Make sure apps using this library don't
 		// purge the classes used here.
-		'./src/routes/**/*.svelte',
-		'./src/components/**/*.svelte',
+		'./src/**/*.svelte',
 		'./node_modules/design-system/**/*.svelte',
 	],
 	theme: {
