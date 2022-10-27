@@ -1,5 +1,5 @@
 <script lang="ts">
-	import windowInnerHeight from './windowInnerHeight'
+import windowInnerHeight from '$lib/windowInnerHeight'
 </script>
 
 <div class="design-system" style="--window-inner-height: {$windowInnerHeight}px;">
@@ -7,7 +7,7 @@
 </div>
 
 <style>
-	.design-system :global(*) {
-		font-family: 'ABC Maxi Round Variable';
-	}
+.design-system :global(*) {
+	font-family: 'ABC Maxi Round Variable';
+}
 </style>

@@ -7,12 +7,9 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 			'font-family': 'ABC Maxi Round Variable',
 			src: `
 				local('ABCMaxiRoundVariable'),
-				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.woff2')
-						format('woff2'),
-				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.woff')
-						format('woff'),
-				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.ttf')
-						format('truetype');
+				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.woff2') format('woff2'),
+				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.woff') format('woff'),
+				url('https://artbreeder-deployments.b-cdn.net/fonts/ABCMaxiRoundVariable.ttf') format('truetype');
 				`,
 			'font-weight': '200 700',
 			'font-style': 'normal',
@@ -47,7 +44,7 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 				'font-weight': '200',
 				'letter-spacing': '-0.05em',
 				'line-height': '104px',
-				'font-feature-settings': 'ss01', // Enable heavy variant of Maxi.
+				'font-feature-settings': 'ss01 !important', // Enable heavy variant of Maxi.
 			},
 
 			'.text-xl-head': {
@@ -196,7 +193,8 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 			},
 
 			'.border-pill': {
-				'@apply box-content border-8 border-solid border-gray-90 dark:border-gray-80 !important': {},
+				'@apply box-content border-8 border-solid border-gray-90 dark:border-gray-80 !important':
+					{},
 			},
 		},
 		['responsive']
@@ -204,7 +202,7 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 
 	addComponents(
 		{
-			control: value => {
+			control: (value) => {
 				console.debug('value', value)
 				return {
 					[`@apply bg-${value}-30 hover:bg-${value}-20 active:bg-${value}-40`]: {},
