@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let classes = ''
-	export let href: string | undefined | null = undefined
+export let classes = ''
+export let href: string | undefined | null = undefined
 </script>
 
 {#if href}
@@ -8,5 +8,7 @@
 		<slot />
 	</a>
 {:else}
-	<slot />
+	<span class={classes}>
+		<slot />
+	</span>
 {/if}
