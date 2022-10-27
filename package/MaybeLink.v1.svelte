@@ -7,5 +7,7 @@ export let href = undefined;
 		<slot />
 	</a>
 {:else}
-	<slot />
+	<span class={classes}>
+		<slot />
+	</span>
 {/if}
