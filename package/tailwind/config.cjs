@@ -5,12 +5,13 @@ module.exports = {
 		preflight: true,
 	},
 	plugins: [require('./designSystemPlugin.cjs')],
-	purge: [
+	content: [
 		// Make sure apps using this library don't
 		// purge the classes used here.
 		'./src/**/*.svelte',
 		'./node_modules/design-system/**/*.svelte',
 	],
+
 	theme: {
 		extend: {
 			height: {
