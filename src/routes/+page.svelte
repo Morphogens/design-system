@@ -9,7 +9,7 @@ import FlatToFlat from '$src/lib/connectors/FlatToFlat.v1.svelte'
 let schedule: Writable<string> & { toggle: () => void }
 </script>
 
-<div class="flex flex-wrap w-full overflow-x-scroll gap-4">
+<div class="flex flex-wrap w-full gap-4 p-4">
 	<div class="component-type">
 		<Title size="s">Titles</Title>
 
@@ -58,6 +58,6 @@ let schedule: Writable<string> & { toggle: () => void }
 
 <style>
 .component-type {
-	@apply flex flex-col gap-4 p-4 border rounded-3xl;
+	@apply flex flex-col gap-4 p-4 border dark:border-gray-10 rounded-3xl;
 }
 </style>
