@@ -3,6 +3,7 @@ declare const __propDef: {
     props: {
         classes?: string | undefined;
         href?: string | undefined | null;
+        style?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
