@@ -1,24 +1,28 @@
 <script lang="ts">
-	import { writable } from 'svelte/store'
+import { writable, type Writable } from 'svelte/store'
 
-	export let values: [string, string] = ['left', 'right']
-	export let defaultValue = values[0]
-	export let showLabels: 'none' | 'left' | 'right' | 'both' = 'none'
-	export let classes = ''
+export let values: [string, string] = ['left', 'right']
+export let defaultValue = values[0]
+export let showLabels: 'none' | 'left' | 'right' | 'both' = 'none'
+export let classes = ''
 
-	export let value = { ...writable(defaultValue), toggle }
+export let value: Writable<string> & { toggle: () => void } = { ...writable(defaultValue), toggle }
 
-	$: valueIndex = values.indexOf($value)
+$: valueIndex = values.indexOf($value)
 
-	function set(index: number) {
-		return function () {
-			$value = values[index]
-		}
+function set(index: number) {
+	return function () {
+		$value = values[index]
 	}
+}
 
-	function toggle() {
-		$value = values[valueIndex === 0 ? 1 : 0]
-	}
+function toggle() {
+	$value = notValue()
+}
+
+function notValue() {
+	return values[valueIndex === 0 ? 1 : 0]
+}
 </script>
 
 <div class="flex flex-row items-center gap-2 cursor-pointer mx-auto">
@@ -41,7 +45,7 @@
 </div>
 
 <style>
-	span {
-		@apply dark:text-gray-10;
-	}
+span {
+	@apply dark:text-gray-10;
+}
 </style>

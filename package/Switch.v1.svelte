@@ -11,7 +11,10 @@ function set(index) {
     };
 }
 function toggle() {
-    $value = values[valueIndex === 0 ? 1 : 0];
+    $value = notValue();
+}
+function notValue() {
+    return values[valueIndex === 0 ? 1 : 0];
 }
 </script>
 
@@ -35,7 +38,7 @@ function toggle() {
 </div>
 
 <style>
-	@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     span {
         --tw-text-opacity: 1;
         color: rgb(242 240 253 / var(--tw-text-opacity))

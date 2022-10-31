@@ -6,6 +6,6 @@
 </div>
 
 <style>
-	.design-system :global(*) {
-		font-family: 'ABC Maxi Round Variable';
-	}</style>
+.design-system :global(*) {
+	font-family: 'ABC Maxi Round Variable';
+}</style>
