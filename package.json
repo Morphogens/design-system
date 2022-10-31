@@ -13,9 +13,6 @@
 	"dependencies": {
 		"tippy.js": "6.3.7"
 	},
-	"exports": {
-		"./tooltip.js": "./tooltip.js"
-	},
 	"devDependencies": {
 		"@playwright/test": "^1.25.0",
 		"@sveltejs/adapter-auto": "next",
