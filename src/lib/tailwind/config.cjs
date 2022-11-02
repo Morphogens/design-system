@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
 	corePlugins: {
 		preflight: true,
 	},
@@ -8,12 +7,9 @@ module.exports = {
 	content: [
 		// Make sure apps using this library don't
 		// purge the classes used here.
-		'./src/**/*.ts',
-		'./src/**/*.js',
-		'./src/**/*.svelte',
+		'./src/**/*.{html,js,svelte,ts}',
 		'./node_modules/design-system/**/*.svelte',
 	],
-
 	theme: {
 		extend: {
 			height: {
