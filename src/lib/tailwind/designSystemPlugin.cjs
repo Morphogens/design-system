@@ -203,7 +203,6 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 	addComponents(
 		{
 			control: (value) => {
-				console.debug('value', value)
 				return {
 					[`@apply bg-${value}-30 hover:bg-${value}-20 active:bg-${value}-40`]: {},
 				}
