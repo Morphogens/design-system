@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { Writable } from 'svelte/store'
 import Title from '$lib/Title.v1.svelte'
-import Switch from '$lib/Switch.v1.svelte'
+import Switch from '$src/lib/Switch.v2.svelte'
 import tooltip from '$lib/tooltip'
 import Button from '$lib/Button.v1.svelte'
 import FlatToFlat from '$src/lib/connectors/FlatToFlat.v1.svelte'

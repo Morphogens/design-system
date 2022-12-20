@@ -1,4 +1,8 @@
+import type { Writable } from 'svelte/store'
+
 export type DesignSystemSize = 's' | 'm' | 'l' | 'xl' | 'xxl'
+
+export type BinaryWritable<T> = Writable<T> & { toggle: () => void; notValue: () => T }
 
 export type ColorName =
 	| 'transparent'
