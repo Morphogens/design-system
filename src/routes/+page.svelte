@@ -5,8 +5,9 @@ import Switch from '$src/lib/Switch.v2.svelte'
 import tooltip from '$lib/tooltip'
 import Button from '$lib/Button.v1.svelte'
 import FlatToFlat from '$src/lib/connectors/FlatToFlat.v1.svelte'
+import type { BinaryWritable } from '$src/types'
 
-let schedule: Writable<string> & { toggle: () => void }
+let schedule: BinaryWritable<'yearly' | 'monthly'>
 </script>
 
 <div class="flex flex-wrap w-full gap-4 p-4">
@@ -29,11 +30,13 @@ let schedule: Writable<string> & { toggle: () => void }
 
 	<div class="component-type">
 		<Title size="s">Switch</Title>
+
 		<Switch
 			values={['yearly', 'monthly']}
 			bind:value={schedule}
 			showLabels="both"
 			classes="border-pill"
+			on:change={console.log}
 		/>
 	</div>
 

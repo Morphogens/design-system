@@ -26,7 +26,8 @@ function set(index: number) {
 }
 
 function toggle() {
-	set(values.indexOf(notValue()))
+	$value = notValue()
+	dispatch('change', $value)
 }
 
 function notValue() {

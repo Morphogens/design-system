@@ -14,7 +14,8 @@ function set(index) {
     };
 }
 function toggle() {
-    set(values.indexOf(notValue()));
+    $value = notValue();
+    dispatch('change', $value);
 }
 function notValue() {
     return values[valueIndex === 0 ? 1 : 0];
