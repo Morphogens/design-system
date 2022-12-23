@@ -61,7 +61,7 @@ export let contentClasses = '';
 
     display: flex;
 
-    width: 600px;
+    width: 480px;
 
     max-width: 100%;
 

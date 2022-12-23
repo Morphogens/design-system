@@ -25,7 +25,7 @@ export let contentClasses = ''
 }
 
 .list-box {
-	@apply flex flex-col items-center justify-start max-w-full w-[600px] relative;
+	@apply flex flex-col items-center justify-start max-w-full w-[480px] relative;
 }
 
 p,
