@@ -1,11 +1,13 @@
 <script lang="ts">
-import type { Writable } from 'svelte/store'
 import Title from '$lib/Title.v1.svelte'
 import Switch from '$src/lib/Switch.v2.svelte'
 import tooltip from '$lib/tooltip'
 import Button from '$lib/Button.v1.svelte'
 import FlatToFlat from '$src/lib/connectors/FlatToFlat.v1.svelte'
+import ListBox from '$lib/ListBox.v1.svelte'
+import ListItem from '$lib/ListItem.v1.svelte'
 import type { BinaryWritable } from '$src/types'
+import Input from '$src/lib/Input.v1.svelte'
 
 let schedule: BinaryWritable<'yearly' | 'monthly'>
 </script>
@@ -56,6 +58,24 @@ let schedule: BinaryWritable<'yearly' | 'monthly'>
 			testing
 		</button>
 		<Button classes="!bg-hover-active-blue">Button</Button>
+	</div>
+
+	<div class="component-type">
+		<ListBox title="List Box">
+			<ListItem title="List Item" detail="Optional detail">
+				<Input type="text" placeholder="text Input" slot="action" />
+			</ListItem>
+			<ListItem title="List Item">
+				<Input type="number" placeholder="Number Input" slot="action" />
+			</ListItem>
+			<ListItem title="List Item">
+				<Input type="email" placeholder="email" slot="action" />
+			</ListItem>
+			<ListItem title="List Item">
+				<span slot="detail"> Detail or title can also be a slot 🎉 </span>
+				<Input type="password" placeholder="password input" slot="action" />
+			</ListItem>
+		</ListBox>
 	</div>
 </div>
 

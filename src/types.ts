@@ -1,8 +1,32 @@
 import type { Writable } from 'svelte/store'
 
-export type DesignSystemSize = 's' | 'm' | 'l' | 'xl' | 'xxl'
+export type DesignSystemSize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl'
 
 export type BinaryWritable<T> = Writable<T> & { toggle: () => void; notValue: () => T }
+
+export type InputType =
+	| 'button'
+	| 'checkbox'
+	| 'color'
+	| 'date'
+	| 'datetime-local'
+	| 'email'
+	| 'file'
+	| 'hidden'
+	| 'image'
+	| 'month'
+	| 'number'
+	| 'password'
+	| 'radio'
+	| 'range'
+	| 'reset'
+	| 'search'
+	| 'submit'
+	| 'tel'
+	| 'text'
+	| 'time'
+	| 'url'
+	| 'week'
 
 export type ColorName =
 	| 'transparent'
