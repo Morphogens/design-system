@@ -3,6 +3,7 @@ declare const __propDef: {
     props: {
         title?: string | undefined;
         detail?: string | undefined;
+        classes?: string | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;
