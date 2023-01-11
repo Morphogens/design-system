@@ -11,7 +11,6 @@ declare const __propDef: {
         autocomplete?: string | undefined;
         pattern?: string | undefined;
         placeholder?: string | undefined;
-        autofocus?: boolean | undefined;
         disabled?: boolean | undefined;
         readonly?: boolean | undefined;
         required?: boolean | undefined;

@@ -70,13 +70,4 @@ export let contentClasses = '';
     align-items: center;
 
     justify-content: flex-start
-}
-
-p, 
-h3, 
-h2 {
-
-    margin: 0px;
-
-    text-align: center
 }</style>

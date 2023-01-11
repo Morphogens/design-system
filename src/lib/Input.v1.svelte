@@ -12,7 +12,6 @@ export let name: string | undefined = undefined
 export let autocomplete: string | undefined = undefined
 export let pattern: string | undefined = undefined
 export let placeholder: string | undefined = undefined
-export let autofocus: boolean | undefined = undefined
 export let disabled: boolean | undefined = undefined
 export let readonly: boolean | undefined = undefined
 export let required: boolean | undefined = undefined
@@ -32,7 +31,6 @@ function setType(node: HTMLInputElement) {
 	on:input
 	on:change
 	{autocomplete}
-	{autofocus}
 	{name}
 	{placeholder}
 	{readonly}

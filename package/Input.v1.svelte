@@ -8,7 +8,6 @@ export let name = undefined;
 export let autocomplete = undefined;
 export let pattern = undefined;
 export let placeholder = undefined;
-export let autofocus = undefined;
 export let disabled = undefined;
 export let readonly = undefined;
 export let required = undefined;
@@ -27,7 +26,6 @@ function setType(node) {
 	on:input
 	on:change
 	{autocomplete}
-	{autofocus}
 	{name}
 	{placeholder}
 	{readonly}

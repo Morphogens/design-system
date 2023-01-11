@@ -28,7 +28,7 @@ module.exports = plugin(function ({ addComponents, addBase, addUtilities, theme 
 	//
 	// This slightly funny syntax is how you use @apply when creating component classes in plugins.
 	const controlComponents = {}
-	for (colorName of colorNames) {
+	for (const colorName of colorNames) {
 		const className = '.bg-hover-active-' + colorName
 		const selector = `@apply bg-${colorName}-30 hover:bg-${colorName}-20 active:bg-${colorName}-40`
 		controlComponents[className] = {
