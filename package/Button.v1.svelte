@@ -3,9 +3,11 @@ export let size = 'm';
 export let classes = '';
 export let disabled = false;
 export let href = undefined;
+export let target = undefined;
+export let rel = undefined;
 </script>
 
-<MaybeLink {href}>
+<MaybeLink {href} {target} {rel}>
 	<button
 		class="
 				border-none

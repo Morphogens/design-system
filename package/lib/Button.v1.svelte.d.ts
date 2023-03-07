@@ -6,6 +6,8 @@ declare const __propDef: {
         classes?: string | undefined;
         disabled?: boolean | undefined;
         href?: string | undefined | null;
+        target?: string | undefined | null;
+        rel?: string | undefined | null;
     };
     events: {
         click: MouseEvent;

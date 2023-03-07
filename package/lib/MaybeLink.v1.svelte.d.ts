@@ -2,7 +2,8 @@ import { SvelteComponentTyped } from "svelte";
 declare const __propDef: {
     props: {
         href?: string | undefined | null;
-        target?: string | undefined;
+        target?: string | undefined | null;
+        rel?: string | undefined | null;
         classes?: string | undefined;
         style?: string | undefined;
     };

@@ -6,9 +6,11 @@ export let size: DesignSystemSize = 'm'
 export let classes = ''
 export let disabled = false
 export let href: string | undefined | null = undefined
+export let target: string | undefined | null = undefined
+export let rel: string | undefined | null = undefined
 </script>
 
-<MaybeLink {href}>
+<MaybeLink {href} {target} {rel}>
 	<button
 		class="
 				border-none
